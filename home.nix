@@ -4,6 +4,7 @@
   home.packages = [
     pkgs.ag
     pkgs.mc
+    pkgs.multimarkdown
     pkgs.stack
     pkgs.strace
   ];
@@ -19,6 +20,7 @@
       intero
       ivy
       magit
+      markdown-mode
       nix-mode
       powerline
       railscasts-reloaded-theme
