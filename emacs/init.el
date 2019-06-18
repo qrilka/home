@@ -4,10 +4,10 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (set-default-font "LiberationMono-10")
-(use-package railscasts-reloaded-theme
+(use-package spacegray-theme
   :ensure t
   :init
-  (load-theme 'railscasts-reloaded t))
+  (load-theme 'spacegray t))
 (blink-cursor-mode 0)
 ;; inital view
 (setq initial-scratch-message "")
@@ -18,7 +18,8 @@
 (use-package recentf
   :config
   (recentf-mode 1)
-  (setq recentf-max-menu-items 20)
+  (setq recentf-max-menu-items 50)
+  (setq recentf-max-saved-items 50)
   :init
   (global-set-key "\C-x\C-r" 'recentf-open-files))
 
@@ -58,3 +59,9 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+(use-package yaml-mode
+  :mode "\\.ya?ml\\'")
+
+(use-package purescript-mode
+  :mode "\\.purs\\'")

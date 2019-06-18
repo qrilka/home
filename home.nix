@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = [
     pkgs.ag
     pkgs.mc
@@ -23,9 +25,11 @@
       markdown-mode
       nix-mode
       powerline
-      railscasts-reloaded-theme
+      purescript-mode
       smex
+      spacegray-theme
       use-package
+      yaml-mode
       ];
   };
   home.file.".emacs".source = "${./emacs/init.el}";
