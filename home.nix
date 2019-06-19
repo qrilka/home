@@ -5,6 +5,7 @@
 
   home.packages = [
     pkgs.ag
+    pkgs.haskellPackages.hindent
     pkgs.mc
     pkgs.multimarkdown
     pkgs.stack
