@@ -4,10 +4,10 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (set-default-font "LiberationMono-10")
-(use-package spacegray-theme
+(use-package material-theme
   :ensure t
   :init
-  (load-theme 'spacegray t))
+  (load-theme 'material t))
 (blink-cursor-mode 0)
 ;; inital view
 (setq initial-scratch-message "")

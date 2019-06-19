@@ -23,11 +23,11 @@
       ivy
       magit
       markdown-mode
+      material-theme
       nix-mode
       powerline
       purescript-mode
       smex
-      spacegray-theme
       use-package
       yaml-mode
       ];
