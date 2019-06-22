@@ -28,6 +28,7 @@
       nix-mode
       powerline
       purescript-mode
+      rust-mode
       smex
       use-package
       yaml-mode

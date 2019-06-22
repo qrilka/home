@@ -65,3 +65,6 @@
 
 (use-package purescript-mode
   :mode "\\.purs\\'")
+
+(use-package rust-mode
+  :mode "\\.rs\\'")
