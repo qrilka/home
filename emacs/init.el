@@ -14,6 +14,9 @@
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 
+;; auto revert mode
+(global-auto-revert-mode 1)
+
 ;; recentf
 (use-package recentf
   :config
