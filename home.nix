@@ -46,6 +46,7 @@
     userEmail = "qrilka@gmail.com";
     signing = {
       key = "17924AD2";
+      signByDefault = true;
     };
   };
 
