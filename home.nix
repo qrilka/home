@@ -2,10 +2,13 @@
 
 {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true; # intero only?
 
   home.packages = [
     pkgs.ag
     pkgs.haskellPackages.hindent
+    (pkgs.haskell.lib.dontCheck pkgs.haskellPackages.intero)
+    pkgs.gitAndTools.hub
     pkgs.mc
     pkgs.multimarkdown
     pkgs.stack
