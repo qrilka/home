@@ -71,3 +71,6 @@
 
 (use-package rust-mode
   :mode "\\.rs\\'")
+
+(use-package terraform-mode
+  :mode "\\.tf\\'")

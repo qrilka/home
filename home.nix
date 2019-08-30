@@ -30,6 +30,7 @@
       purescript-mode
       rust-mode
       smex
+      terraform-mode
       use-package
       yaml-mode
       ];
