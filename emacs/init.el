@@ -26,6 +26,9 @@
   :init
   (global-set-key "\C-x\C-r" 'recentf-open-files))
 
+;; we don't need no tabs
+(setq-default indent-tabs-mode nil)
+
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
