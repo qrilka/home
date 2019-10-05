@@ -35,6 +35,7 @@
       smex
       terraform-mode
       treemacs
+      treemacs-magit
       use-package
       yaml-mode
       ];
