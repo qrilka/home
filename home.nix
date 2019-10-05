@@ -34,6 +34,7 @@
       rust-mode
       smex
       terraform-mode
+      treemacs
       use-package
       yaml-mode
       ];
