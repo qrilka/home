@@ -7,7 +7,6 @@
   home.packages = [
     pkgs.ag
     pkgs.haskellPackages.hindent
-    (pkgs.haskell.lib.dontCheck pkgs.haskellPackages.intero)
     pkgs.gitAndTools.hub
     pkgs.mc
     pkgs.multimarkdown
@@ -22,9 +21,9 @@
     package = pkgs.emacs;
     extraPackages = epkgs: with epkgs; [
       ag
+      dante
       forge
       hindent
-      intero
       ivy
       magit
       markdown-mode
