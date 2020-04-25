@@ -48,6 +48,7 @@
 
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
     userName = "Kirill Zaborsky";
     userEmail = "qrilka@gmail.com";
     signing = {
