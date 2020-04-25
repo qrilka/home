@@ -65,6 +65,8 @@
     };
   };
 
+  programs.gpg.enable = true;
+
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
