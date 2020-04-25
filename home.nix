@@ -14,6 +14,7 @@
     pkgs.multimarkdown
     pkgs.stack
     pkgs.strace
+    pkgs.tree
   ];
 
   # Let Home Manager install and manage itself.
