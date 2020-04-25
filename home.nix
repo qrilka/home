@@ -7,7 +7,6 @@
   home.packages = [
     pkgs.ag
     pkgs.breeze-icons
-    pkgs.haskellPackages.hindent
     pkgs.gitAndTools.hub
     pkgs.kdiff3
     pkgs.mc

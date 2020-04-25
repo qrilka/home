@@ -47,12 +47,6 @@
   :config
   (powerline-center-theme))
 
-(use-package hindent
-  :ensure t
-  :config
-  (setq hindent-style "johan-tibell"))
-(add-hook 'haskell-mode-hook #'hindent-mode)
-
 (use-package dante
   :ensure t
   :after haskell-mode
