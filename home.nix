@@ -6,8 +6,10 @@
 
   home.packages = [
     pkgs.ag
+    pkgs.breeze-icons
     pkgs.haskellPackages.hindent
     pkgs.gitAndTools.hub
+    pkgs.kdiff3
     pkgs.mc
     pkgs.multimarkdown
     pkgs.stack
@@ -59,11 +61,13 @@
       credential = {
         helper = "store --file ~/.git.credentials";
       };
+      merge.tool = "kdiff3";
     };
   };
 
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+    XDG_DATA_DIRS = "$HOME/.nix-profile/share\${XDG_DATA_DIRS:+:}$XDG_DATA_DIRS";
   };
 }
