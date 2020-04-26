@@ -22,6 +22,7 @@
     package = pkgs.emacs;
     extraPackages = epkgs: with epkgs; [
       ag
+      forge
       hindent
       intero
       ivy
@@ -49,6 +50,11 @@
     signing = {
       key = "17924AD2";
       signByDefault = true;
+    };
+    extraConfig = {
+      github = {
+        user = "qrilka";
+      };
     };
   };
 
