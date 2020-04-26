@@ -30,6 +30,7 @@
       markdown-mode
       material-theme
       nix-mode
+      org
       powerline
       purescript-mode
       rust-mode

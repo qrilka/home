@@ -95,3 +95,43 @@
 (use-package treemacs-magit
   :after treemacs magit
   :ensure t)
+
+(use-package org
+  :bind
+  (:map global-map
+        ("C-c l" . org-store-link)
+        ("C-c c" . org-capture)
+        ("C-c a" . org-agenda))
+  :init
+  (setq org-agenda-start-on-weekday nil)
+  (setq org-default-notes-file "~/ws/org/notes.org")
+  (setq org-agenda-files (list "~/ws/org/work.org"
+                               "~/ws/org/open-source.org"
+                               "~/ws/org/misc-notes.org"
+                               "~/ws/org/books.org"
+                               "~/ws/org/learning.org"
+                               "~/ws/org/home.org"))
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "IN-PROCESS(p)" "|" "DONE(d)")
+          (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)")))
+  (setq org-todo-keyword-faces
+      (quote (("TODO" :foreground "red" :weight bold)
+              ("IN-PROCESS" :foreground "deep sky blue" :weight bold)
+              ("DONE" :foreground "forest green" :weight bold)
+              ("WAITING" :foreground "orange" :weight bold)
+              ("HOLD" :foreground "magenta" :weight bold)
+              ("CANCELLED" :foreground "forest green" :weight bold))))
+  (setq org-capture-templates
+      (quote (("t" "todo" entry (file "~/ws/org/todo.org")
+               "* TODO %?\n%U\n%a\n")
+              ("n" "note" entry (file "~/ws/org/notes.org")
+               "* %? :NOTE:\n%U\n%a\n")
+              ("j" "Journal" entry (file+datetree "~/ws/org/diary.org")
+               "* %?\n%U\n"))))
+  ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+  (setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                   (org-agenda-files :maxlevel . 9))))
+  (setq org-refile-use-outline-path 'file)
+  ;; makes org-refile outline working with helm/ivy
+  (setq org-outline-path-complete-in-steps nil)
+  (setq org-refile-allow-creating-parent-nodes 'confirm))
