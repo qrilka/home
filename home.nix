@@ -11,6 +11,7 @@
     pkgs.kdiff3
     pkgs.mc
     pkgs.multimarkdown
+    pkgs.ormolu
     pkgs.stack
     pkgs.strace
     pkgs.tree
@@ -33,6 +34,7 @@
       material-theme
       nix-mode
       org
+      ormolu
       powerline
       purescript-mode
       rust-mode
