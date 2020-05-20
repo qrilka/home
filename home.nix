@@ -56,6 +56,9 @@
       github = {
         user = "qrilka";
       };
+      credential = {
+        helper = "store --file ~/.git.credentials";
+      };
     };
   };
 
