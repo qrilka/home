@@ -28,6 +28,7 @@
       ivy
       magit
       markdown-mode
+      markdown-toc
       material-theme
       nix-mode
       org
