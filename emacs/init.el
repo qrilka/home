@@ -43,6 +43,10 @@
 ;;smex
 (global-set-key (kbd "M-x") 'smex)
 
+(use-package flycheck
+  :config
+  (flycheck-pos-tip-mode))
+
 (use-package powerline
   :config
   (powerline-center-theme))

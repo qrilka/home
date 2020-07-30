@@ -25,6 +25,7 @@
     extraPackages = epkgs: with epkgs; [
       ag
       dante
+      flycheck-pos-tip
       forge
       hindent
       ivy
