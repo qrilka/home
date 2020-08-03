@@ -11,7 +11,7 @@
     pkgs.kdiff3
     pkgs.mc
     pkgs.multimarkdown
-    pkgs.ormolu
+#    pkgs.ormolu
     pkgs.stack
     pkgs.strace
     pkgs.tree
@@ -35,7 +35,8 @@
       material-theme
       nix-mode
       org
-      ormolu
+# 20.03 contains mepla snapshot for 2020-01-08 and ormolu package is just too old
+#      ormolu
       powerline
       purescript-mode
       rust-mode
