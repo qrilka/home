@@ -5,13 +5,18 @@
   nixpkgs.config.allowBroken = true; # intero only?
 
   home.packages = [
+    pkgs.awscli
     pkgs.bandwhich
     pkgs.breeze-icons
     pkgs.du-dust
     pkgs.fd
+    pkgs.gawk # for unrar in mc
     pkgs.gitAndTools.hub
     pkgs.kdiff3
+    pkgs.jetbrains.idea-community
+    pkgs.meld
     pkgs.mc
+    pkgs.mpv
     pkgs.multimarkdown
 #    pkgs.ormolu
     pkgs.procs
@@ -22,6 +27,7 @@
     pkgs.tree
 # dies on ? entered
     #    pkgs.ytop
+    pkgs.unrar
 #    not in 20.03
 #    pkgs.zenith
   ];
@@ -80,7 +86,9 @@
     };
   };
 
+  programs.ssh.enable = true;
   programs.gpg.enable = true;
+  services.gpg-agent.enable = true;
 
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
