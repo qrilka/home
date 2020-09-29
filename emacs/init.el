@@ -60,12 +60,12 @@
   (add-hook 'haskell-mode-hook 'dante-mode)
   )
 
-(use-package ormolu
-  :after dante
-  :hook haskell-mode
-  :bind
-  (:map haskell-mode-map
-        ("<M-return>" . ormolu-format-region)))
+;(use-package ormolu
+;  :after dante
+;  :hook haskell-mode
+;  :bind
+;  (:map haskell-mode-map
+;        ("<M-return>" . ormolu-format-region)))
 
 (use-package magit
   :bind
