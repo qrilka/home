@@ -147,3 +147,7 @@
   ;; makes org-refile outline working with helm/ivy
   (setq org-outline-path-complete-in-steps nil)
   (setq org-refile-allow-creating-parent-nodes 'confirm))
+
+(use-package rg
+  :init
+  (rg-enable-default-bindings))

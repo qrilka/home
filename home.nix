@@ -5,16 +5,25 @@
   nixpkgs.config.allowBroken = true; # intero only?
 
   home.packages = [
-    pkgs.ag
+    pkgs.bandwhich
     pkgs.breeze-icons
+    pkgs.du-dust
+    pkgs.fd
     pkgs.gitAndTools.hub
     pkgs.kdiff3
     pkgs.mc
     pkgs.multimarkdown
 #    pkgs.ormolu
+    pkgs.procs
+    pkgs.ripgrep
+    pkgs.rustup
     pkgs.stack
     pkgs.strace
     pkgs.tree
+# dies on ? entered
+    #    pkgs.ytop
+#    not in 20.03
+#    pkgs.zenith
   ];
 
   # Let Home Manager install and manage itself.
@@ -39,6 +48,7 @@
 #      ormolu
       powerline
       purescript-mode
+      rg
       rust-mode
       smex
       terraform-mode
