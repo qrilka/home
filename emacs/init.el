@@ -146,7 +146,8 @@
   (setq org-refile-use-outline-path 'file)
   ;; makes org-refile outline working with helm/ivy
   (setq org-outline-path-complete-in-steps nil)
-  (setq org-refile-allow-creating-parent-nodes 'confirm))
+  (setq org-refile-allow-creating-parent-nodes 'confirm)
+  (setq org-log-into-drawer t))
 
 (use-package rg
   :init
