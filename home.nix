@@ -58,7 +58,7 @@
       material-theme
       nix-mode
       org
-# 20.03 contains mepla snapshot for 2020-01-08 and ormolu package is just too old
+# 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
 #      ormolu
       powerline
       purescript-mode
