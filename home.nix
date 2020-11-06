@@ -39,8 +39,10 @@
     package = pkgs.emacs;
     extraPackages = epkgs: with epkgs; [
       ag
+      cargo
       dante
       flycheck-pos-tip
+      flycheck-rust
       forge
       hindent
       ivy

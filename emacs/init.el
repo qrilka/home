@@ -87,8 +87,14 @@
 (use-package purescript-mode
   :mode "\\.purs\\'")
 
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+
 (use-package rust-mode
   :mode "\\.rs\\'")
+
+(use-package flycheck-rust
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package terraform-mode
   :mode "\\.tf\\'")
