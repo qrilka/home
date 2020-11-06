@@ -34,8 +34,7 @@
     #    pkgs.ytop
     pkgs.unrar
 #    pkgs.zoom-us doesn't work even with nixGL
-#    not in 20.03
-#    pkgs.zenith
+    pkgs.zenith
   ];
 
   # Let Home Manager install and manage itself.
