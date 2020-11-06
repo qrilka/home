@@ -3,7 +3,7 @@
 ;; UI
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(set-default-font "LiberationMono-10")
+(set-frame-font "LiberationMono-10")
 (use-package material-theme
   :ensure t
   :init
