@@ -13,7 +13,9 @@
     pkgs.gawk # for unrar in mc
     pkgs.gitAndTools.hub
     pkgs.kdiff3
+    pkgs.libreoffice
     pkgs.jetbrains.idea-community
+    pkgs.maim
     pkgs.meld
     pkgs.mc
     pkgs.mpv
@@ -22,12 +24,14 @@
     pkgs.procs
     pkgs.ripgrep
     pkgs.rustup
+    pkgs.simple-scan
     pkgs.stack
     pkgs.strace
     pkgs.tree
 # dies on ? entered
     #    pkgs.ytop
     pkgs.unrar
+#    pkgs.zoom-us doesn't work even with nixGL
 #    not in 20.03
 #    pkgs.zenith
   ];
