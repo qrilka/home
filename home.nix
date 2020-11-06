@@ -5,6 +5,7 @@
   nixpkgs.config.allowBroken = true; # intero only?
 
   home.packages = [
+    pkgs.emacs-all-the-icons-fonts
     pkgs.awscli
     pkgs.bandwhich
     pkgs.breeze-icons
@@ -44,9 +45,11 @@
     package = pkgs.emacs;
     extraPackages = epkgs: with epkgs; [
       ag
+      all-the-icons
       cargo
       dante
       diff-hl
+      doom-modeline
       flycheck-pos-tip
       flycheck-rust
       forge
@@ -61,7 +64,7 @@
       org
 # 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
 #      ormolu
-      powerline
+#      powerline
       purescript-mode
       rg
       rust-mode

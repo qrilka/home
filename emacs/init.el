@@ -48,9 +48,14 @@
   (flycheck-pos-tip-mode)
   :hook (prog-mode . flycheck-mode))
 
-(use-package powerline
-  :config
-  (powerline-center-theme))
+(use-package all-the-icons
+  :ensure t)
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :custom
+  (doom-modeline-icon (display-graphic-p)))
 
 (use-package dante
   :ensure t
