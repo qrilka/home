@@ -168,3 +168,9 @@
 (use-package diff-hl
   :hook ((prog-mode . diff-hl-mode)
          (magit-post-refresh . diff-hl-magit-post-refresh)))
+
+(custom-set-variables
+ '(safe-local-variable-values '((dante-methods stack))))
+
+(provide 'init)
+;;; init.el ends here
