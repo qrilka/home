@@ -45,7 +45,8 @@
 
 (use-package flycheck
   :config
-  (flycheck-pos-tip-mode))
+  (flycheck-pos-tip-mode)
+  :hook (prog-mode . flycheck-mode))
 
 (use-package powerline
   :config
@@ -158,3 +159,7 @@
 (use-package rg
   :init
   (rg-enable-default-bindings))
+
+(use-package diff-hl
+  :hook ((prog-mode . diff-hl-mode)
+         (magit-post-refresh . diff-hl-magit-post-refresh)))

@@ -41,6 +41,7 @@
       ag
       cargo
       dante
+      diff-hl
       flycheck-pos-tip
       flycheck-rust
       forge
