@@ -56,6 +56,8 @@
 # fails compiling because of MonadFail
 #      hindent
       ivy
+      lsp-mode
+      lsp-ui
       magit
       markdown-mode
       markdown-toc

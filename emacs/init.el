@@ -97,10 +97,20 @@
   :hook (rust-mode . cargo-minor-mode))
 
 (use-package rust-mode
+  :hook (rust-mode . lsp)
   :mode "\\.rs\\'")
 
 (use-package flycheck-rust
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
+(use-package lsp-mode
+  :ensure t
+  :init (setq lsp-keymap-prefix "C-l")
+  :commands lsp)
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
 
 (use-package terraform-mode
   :mode "\\.tf\\'")
