@@ -16,6 +16,7 @@
     pkgs.libreoffice
     pkgs.jetbrains.idea-community
     pkgs.maim
+    pkgs.manpages
     pkgs.meld
     pkgs.mc
     pkgs.mpv
