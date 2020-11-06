@@ -20,6 +20,7 @@
     pkgs.mc
     pkgs.mpv
     pkgs.multimarkdown
+    pkgs.openssh
 #    pkgs.ormolu
     pkgs.procs
     pkgs.ripgrep
@@ -94,8 +95,12 @@
   };
 
   programs.ssh.enable = true;
-  programs.gpg.enable = true;
-  services.gpg-agent.enable = true;
+  programs.gpg.enable =  true;
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+    sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
+  };
 
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
