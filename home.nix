@@ -51,7 +51,8 @@
       flycheck-pos-tip
       flycheck-rust
       forge
-      hindent
+# fails compiling because of MonadFail
+#      hindent
       ivy
       magit
       markdown-mode
