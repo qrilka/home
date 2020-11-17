@@ -108,6 +108,8 @@
     sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
   };
 
+  fonts.fontconfig.enable = true;
+
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
