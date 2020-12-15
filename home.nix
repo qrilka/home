@@ -67,8 +67,10 @@
 # 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
 #      ormolu
 #      powerline
+      projectile
       purescript-mode
       rg
+      ripgrep # for use with projectile
       rust-mode
       smex
       terraform-mode
