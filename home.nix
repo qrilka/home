@@ -100,13 +100,15 @@
     };
   };
 
-  programs.ssh.enable = true;
+  programs.direnv.enable = true;
+  programs.direnv.enableNixDirenvIntegration = true;
   programs.gpg.enable =  true;
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
     sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
   };
+  programs.ssh.enable = true;
 
   fonts.fontconfig.enable = true;
 
