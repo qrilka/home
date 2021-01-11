@@ -111,6 +111,10 @@
     sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
   };
   programs.ssh.enable = true;
+  programs.vscode = {
+    enable = true;
+    extensions = [ pkgs.vscode-extensions.matklad.rust-analyzer ];
+  };
 
   fonts.fontconfig.enable = true;
 
