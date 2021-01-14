@@ -3,6 +3,7 @@
 ;; UI
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(setq column-number-mode t)
 (set-frame-font "LiberationMono-10")
 (use-package material-theme
   :ensure t
