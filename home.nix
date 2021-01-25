@@ -53,9 +53,8 @@
       flycheck-pos-tip
       flycheck-rust
       forge
-# fails compiling because of MonadFail
-#      hindent
-      ivy
+      # fails compiling because of MonadFail
+      #      hindent
       lsp-mode
       lsp-ui
       magit
@@ -64,15 +63,16 @@
       material-theme
       nix-mode
       org
-# 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
-#      ormolu
-#      powerline
+      # 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
+      #      ormolu
+      #      powerline
       projectile
       purescript-mode
       rg
       ripgrep # for use with projectile
       rust-mode
-      smex
+      selectrum
+      selectrum-prescient
       terraform-mode
       treemacs
       treemacs-magit

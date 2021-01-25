@@ -36,13 +36,14 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-(use-package ivy
-  :diminish ivy-mode
-  :config
-  (ivy-mode 1))
+(use-package selectrum
+  :demand t
+  :custom (selectrum-mode t))
 
-;;smex
-(global-set-key (kbd "M-x") 'smex)
+(use-package selectrum-prescient
+  :demand t
+  :custom (selectrum-prescient-mode t)
+  (prescient-filter-method '(literal regexp initialism fuzzy)))
 
 (use-package flycheck
   :config
@@ -184,7 +185,6 @@
   :ensure t
   :init
   (projectile-mode +1)
-  (setq projectile-completion-system 'ivy)
   :bind (:map projectile-mode-map
               ("s-p" . projectile-command-map)
               ("C-c p" . projectile-command-map)))
