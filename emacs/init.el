@@ -76,6 +76,8 @@
 ;        ("<M-return>" . ormolu-format-region)))
 
 (use-package magit
+  :custom
+  (magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
   :bind
   (("C-x g" . magit-status )))
 
