@@ -38,8 +38,18 @@
     pkgs.zenith
   ];
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+
+  fonts.fontconfig.enable = true;
+
+  home.file.".emacs".source = "${./emacs/init.el}";
+  home.sessionVariables = {
+    LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+    LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+    XDG_DATA_DIRS = "$HOME/.nix-profile/share\${XDG_DATA_DIRS:+:}$XDG_DATA_DIRS";
+  };
+
+  programs.direnv.enable = true;
+  programs.direnv.enableNixDirenvIntegration = true;
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
@@ -81,8 +91,9 @@
       yaml-mode
       ];
   };
-  home.file.".emacs".source = "${./emacs/init.el}";
-
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+  programs.gpg.enable =  true;
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -102,26 +113,15 @@
       merge.tool = "kdiff3";
     };
   };
-
-  programs.direnv.enable = true;
-  programs.direnv.enableNixDirenvIntegration = true;
-  programs.gpg.enable =  true;
-  services.gpg-agent = {
-    enable = true;
-    enableSshSupport = true;
-    sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
-  };
   programs.ssh.enable = true;
   programs.vscode = {
     enable = true;
     extensions = [ pkgs.vscode-extensions.matklad.rust-analyzer ];
   };
 
-  fonts.fontconfig.enable = true;
-
-  home.sessionVariables = {
-    LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
-    LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
-    XDG_DATA_DIRS = "$HOME/.nix-profile/share\${XDG_DATA_DIRS:+:}$XDG_DATA_DIRS";
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+    sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
   };
 }
