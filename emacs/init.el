@@ -37,13 +37,17 @@
       `((".*" ,temporary-file-directory t)))
 
 (use-package selectrum
-  :demand t
-  :custom (selectrum-mode t))
+  :ensure t
+  :init (selectrum-mode +1))
+
+(use-package prescient
+  :config
+  (prescient-persist-mode +1))
 
 (use-package selectrum-prescient
-  :demand t
-  :custom (selectrum-prescient-mode t)
-  (prescient-filter-method '(literal regexp initialism fuzzy)))
+  :init
+  (selectrum-prescient-mode +1)
+  :after selectrum)
 
 (use-package flycheck
   :config

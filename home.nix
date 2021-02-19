@@ -66,6 +66,7 @@
       # 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
       #      ormolu
       #      powerline
+      prescient
       projectile
       purescript-mode
       rg
