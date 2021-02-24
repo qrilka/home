@@ -14,6 +14,7 @@
     pkgs.gawk # for unrar in mc
     pkgs.gitAndTools.hub
     pkgs.kdiff3
+    pkgs.keybase-gui
     pkgs.libreoffice
     pkgs.jetbrains.idea-community
     pkgs.maim
@@ -124,4 +125,7 @@
     enableSshSupport = true;
     sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
   };
+
+  services.kbfs.enable = true;
+  services.keybase.enable = true;
 }
