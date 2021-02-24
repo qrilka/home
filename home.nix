@@ -13,6 +13,7 @@
     pkgs.fd
     pkgs.gawk # for unrar in mc
     pkgs.gitAndTools.hub
+    pkgs.go
     pkgs.kdiff3
     pkgs.keybase-gui
     pkgs.libreoffice
@@ -117,7 +118,17 @@
   programs.ssh.enable = true;
   programs.vscode = {
     enable = true;
-    extensions = [ pkgs.vscode-extensions.matklad.rust-analyzer ];
+    extensions = [
+      pkgs.vscode-extensions.matklad.rust-analyzer
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      # pkgs.vscode-extensions.golang.Go
+      {
+        name = "Go";
+        publisher = "golang";
+        version = "0.18.1";
+        sha256 = "sha256-b2Wa3TULQQnBm1/xnDCB9SZjE+Wxz5wBttjDEtf8qlE=";
+      }
+    ];
   };
 
   services.gpg-agent = {
