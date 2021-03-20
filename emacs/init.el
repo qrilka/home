@@ -195,8 +195,9 @@
               ("s-p" . projectile-command-map)
               ("C-c p" . projectile-command-map)))
 
-(custom-set-variables
- '(safe-local-variable-values '((dante-methods stack))))
+(add-to-list 'safe-local-variable-values
+             '(dante-methods stack))
+(put 'dante-target 'safe-local-variable #'stringp)
 
 (provide 'init)
 ;;; init.el ends here
