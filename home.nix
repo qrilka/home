@@ -5,15 +5,22 @@
   nixpkgs.config.allowBroken = true; # intero only?
 
   home.packages = [
-    pkgs.emacs-all-the-icons-fonts
     pkgs.awscli
     pkgs.bandwhich
     pkgs.breeze-icons
+    pkgs.dbeaver
     pkgs.du-dust
+    pkgs.emacs-all-the-icons-fonts
+    pkgs.evince
     pkgs.fd
     pkgs.gawk # for unrar in mc
+    pkgs.gimp
     pkgs.gitAndTools.hub
+    pkgs.gnome-themes-standard
+    pkgs.gnome3.adwaita-icon-theme
+    pkgs.gnome-themes-extra
     pkgs.go
+    pkgs.hicolor-icon-theme
     pkgs.kdiff3
     pkgs.keybase-gui
     pkgs.libreoffice
@@ -24,14 +31,18 @@
     pkgs.mc
     pkgs.mpv
     pkgs.multimarkdown
+    pkgs.nix-tree
+    pkgs.nodePackages.typescript
     pkgs.openssh
 #    pkgs.ormolu
+    pkgs.plantuml
     pkgs.procs
     pkgs.ripgrep
     pkgs.rustup
     pkgs.simple-scan
     pkgs.stack
     pkgs.strace
+    pkgs.teams
     pkgs.tree
 # dies on ? entered
     #    pkgs.ytop
@@ -61,6 +72,7 @@
       cargo
       dante
       diff-hl
+      direnv
       doom-modeline
       flycheck-pos-tip
       flycheck-rust
@@ -89,6 +101,7 @@
       terraform-mode
       treemacs
       treemacs-magit
+      typescript-mode
       use-package
       yaml-mode
       ];
@@ -113,9 +126,19 @@
         helper = "store --file ~/.git.credentials";
       };
       merge.tool = "kdiff3";
+      pull.ff = "only";
     };
   };
-  programs.ssh.enable = true;
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "bitbucket-fpco" = {
+        hostname = "bitbucket.org";
+        identityFile = "~/.ssh/id_rsa_bitbucket";
+        identitiesOnly = true;
+      };
+    };
+  };
   programs.vscode = {
     enable = true;
     extensions = [
@@ -139,4 +162,6 @@
 
   services.kbfs.enable = true;
   services.keybase.enable = true;
+
+  xdg.enable = true;
 }

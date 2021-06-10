@@ -101,6 +101,9 @@
 (use-package purescript-mode
   :mode "\\.purs\\'")
 
+(use-package typescript-mode
+  :mode "\\.tsx\\'")
+
 (use-package cargo
   :hook (rust-mode . cargo-minor-mode))
 
@@ -198,6 +201,10 @@
 (add-to-list 'safe-local-variable-values
              '(dante-methods stack))
 (put 'dante-target 'safe-local-variable #'stringp)
+
+(use-package direnv
+  :config
+  (direnv-mode))
 
 (provide 'init)
 ;;; init.el ends here
