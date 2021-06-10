@@ -2,7 +2,7 @@ let
 
   sources = import ./nix/sources.nix;
 
-  nixpkgs = sources."nixos-20.09";
+  nixpkgs = sources."nixos-21.05";
 
   pkgs = import nixpkgs {};
 
