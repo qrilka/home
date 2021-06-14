@@ -141,12 +141,18 @@
   :after treemacs magit
   :ensure t)
 
+
+(defun disable-electric-indent ()
+  "Disable electric indenting."
+  (electric-indent-local-mode -1))
+
 (use-package org
   :bind
   (:map global-map
         ("C-c l" . org-store-link)
         ("C-c c" . org-capture)
         ("C-c a" . org-agenda))
+  :hook (org-mode . disable-electric-indent);(electric-indent-local-mode -1));((add-hook! 'org-mode-hook (electric-indent-local-mode -1))
   :init
   (setq org-agenda-start-on-weekday nil)
   (setq org-default-notes-file "~/ws/org/notes.org")
