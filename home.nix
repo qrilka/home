@@ -25,6 +25,7 @@
     pkgs.keybase-gui
     pkgs.libreoffice
     pkgs.jetbrains.idea-community
+    pkgs.just
     pkgs.maim
     pkgs.manpages
     pkgs.meld
