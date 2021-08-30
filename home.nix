@@ -83,6 +83,7 @@
       forge
       # fails compiling because of MonadFail
       #      hindent
+      just-mode
       lsp-mode
       lsp-ui
       magit
