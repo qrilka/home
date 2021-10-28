@@ -7,6 +7,7 @@
   home.packages = [
     pkgs.awscli
     pkgs.bandwhich
+    pkgs.bitwarden-cli
     pkgs.breeze-icons
     pkgs.dbeaver
     pkgs.du-dust
@@ -43,6 +44,7 @@
     pkgs.simple-scan
     pkgs.stack
     pkgs.strace
+    pkgs.stylish-haskell
     pkgs.teams
     pkgs.tree
 # dies on ? entered
@@ -81,6 +83,7 @@
       flycheck-pos-tip
       flycheck-rust
       forge
+      graphql-mode
       # fails compiling because of MonadFail
       #      hindent
       just-mode
