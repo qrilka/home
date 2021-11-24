@@ -1,10 +1,26 @@
 { config, pkgs, ... }:
 
+let
+   bwbackup = pkgs.rustPlatform.buildRustPackage rec {
+     pname = "bwbackup";
+     version = "0.1.0";
+
+     src = pkgs.fetchFromGitHub {
+       owner = "snoyberg";
+       repo = pname;
+       rev = "9b608ea1cf50f75b10f638ad0a49ee35878fe96c"; # version;
+       sha256 = "10rwh61m7881xdqcnvvyxacs5x4g4x55x2z21s168b4wip18dk6g";#"73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac";
+     };
+
+     cargoSha256 = "0f92wv0gb1pa7icarqkjj8wyicd4bjw1s6rwsxb59dsnhccnd50n";
+   };
+in
 {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true; # intero only?
 
   home.packages = [
+#    bwbackup
     pkgs.awscli
     pkgs.bandwhich
     pkgs.bitwarden-cli
@@ -34,6 +50,7 @@
     pkgs.mpv
     pkgs.multimarkdown
     pkgs.nix-tree
+    pkgs.nixfmt
     pkgs.nodePackages.typescript
     pkgs.openssh
 #    pkgs.ormolu
@@ -135,6 +152,7 @@
       };
       merge.tool = "kdiff3";
       pull.ff = "only";
+      rerere.enabled = true;
     };
   };
   programs.ssh = {
