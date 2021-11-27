@@ -150,7 +150,10 @@ in
       credential = {
         helper = "store --file ~/.git.credentials";
       };
-      merge.tool = "kdiff3";
+      merge = {
+        tool = "kdiff3";
+        conflictstyle = "diff3";
+      };
       pull.ff = "only";
       rerere.enabled = true;
     };
