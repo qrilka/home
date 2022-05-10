@@ -110,6 +110,7 @@ in
       markdown-mode
       markdown-toc
       material-theme
+      neotree
       nix-mode
       org
       # 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
@@ -124,8 +125,6 @@ in
       selectrum
       selectrum-prescient
       terraform-mode
-      treemacs
-      treemacs-magit
       typescript-mode
       use-package
       yaml-mode
