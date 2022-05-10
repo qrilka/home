@@ -165,6 +165,22 @@ in
         identityFile = "~/.ssh/id_rsa_bitbucket";
         identitiesOnly = true;
       };
+      "jump" = {
+        hostname = "jumphost.tvbeat.com";
+        port = 443;
+        user = "kzaborsky";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "*.node" = {
+        proxyJump = "jump";
+        user = "kzaborsky";
+      };
+      # doesn't work for some reason
+      "*+*" = {
+        proxyCommand = "ssh -v $(echo %h | sed 's/^.*+//;s/^\([^:]*$\)/\1:22/') -W $(echo %h | sed 's/+[^+]*$//;s/\([^+%%]*\)%%\([^+]*\)$/\2 -l \1/;s/:\([^:+]*\)$/ -p \1/')";
+        user = "kzaborsky";
+        identityFile = "~/.ssh/id_ed25519";
+      };
     };
   };
   programs.vscode = {
