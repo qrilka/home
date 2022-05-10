@@ -37,6 +37,7 @@ in
     pkgs.gnome3.adwaita-icon-theme
     pkgs.gnome-themes-extra
     pkgs.go
+    pkgs.graphviz
     pkgs.hicolor-icon-theme
     pkgs.kdiff3
     pkgs.keybase-gui
@@ -56,9 +57,11 @@ in
 #    pkgs.ormolu
     pkgs.plantuml
     pkgs.procs
+    pkgs.ranger
     pkgs.ripgrep
     pkgs.rustup
     pkgs.simple-scan
+    pkgs.smartmontools
     pkgs.stack
     pkgs.strace
     pkgs.stylish-haskell
@@ -101,11 +104,13 @@ in
       flycheck-rust
       forge
       graphql-mode
+      graphviz-dot-mode
       # fails compiling because of MonadFail
       #      hindent
       just-mode
       lsp-mode
       lsp-ui
+      lua-mode
       magit
       markdown-mode
       markdown-toc
@@ -119,6 +124,7 @@ in
       prescient
       projectile
       purescript-mode
+      ranger
       rg
       ripgrep # for use with projectile
       rust-mode

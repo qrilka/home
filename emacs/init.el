@@ -203,5 +203,18 @@
   :config
   (direnv-mode))
 
+(use-package lua-mode
+  :custom
+  (lua-indent-level 2))
+
+(use-package graphviz-dot-mode
+  :ensure t
+  :config
+  (setq graphviz-dot-indent-width 4))
+
+(use-package ranger
+  :init
+  (global-set-key [f9] 'ranger))
+
 (provide 'init)
 ;;; init.el ends here
