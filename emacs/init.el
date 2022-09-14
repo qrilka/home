@@ -216,5 +216,7 @@
   :init
   (global-set-key [f9] 'ranger))
 
+(use-package csv-mode)
+
 (provide 'init)
 ;;; init.el ends here

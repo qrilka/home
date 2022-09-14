@@ -96,6 +96,7 @@ in
       ag
       all-the-icons
       cargo
+      csv-mode
       dante
       diff-hl
       direnv
