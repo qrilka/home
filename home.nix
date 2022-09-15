@@ -16,8 +16,8 @@ let
    };
 in
 {
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowBroken = true; # intero only?
+  nixpkgs.config = import ./nixpkgs-config.nix;
+  xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.packages = [
 #    bwbackup
@@ -25,7 +25,7 @@ in
     pkgs.bandwhich
     pkgs.bitwarden-cli
     pkgs.breeze-icons
-    pkgs.dbeaver
+#    pkgs.dbeaver
     pkgs.du-dust
     pkgs.emacs-all-the-icons-fonts
     pkgs.evince
@@ -33,19 +33,19 @@ in
     pkgs.gawk # for unrar in mc
     pkgs.gimp
     pkgs.gitAndTools.hub
-    pkgs.gnome-themes-standard
+    pkgs.gnome-themes-extra
     pkgs.gnome3.adwaita-icon-theme
     pkgs.gnome-themes-extra
-    pkgs.go
+#    pkgs.go
     pkgs.graphviz
     pkgs.hicolor-icon-theme
     pkgs.kdiff3
     pkgs.keybase-gui
     pkgs.libreoffice
-    pkgs.jetbrains.idea-community
+#    pkgs.jetbrains.idea-community
     pkgs.just
     pkgs.maim
-    pkgs.manpages
+    pkgs.man-pages
     pkgs.meld
     pkgs.mc
     pkgs.mpv
@@ -55,7 +55,7 @@ in
     pkgs.nodePackages.typescript
     pkgs.openssh
 #    pkgs.ormolu
-    pkgs.plantuml
+#    pkgs.plantuml
     pkgs.procs
     pkgs.ranger
     pkgs.ripgrep
@@ -65,7 +65,7 @@ in
     pkgs.stack
     pkgs.strace
     pkgs.stylish-haskell
-    pkgs.teams
+#    pkgs.teams
     pkgs.tree
 # dies on ? entered
     #    pkgs.ytop
