@@ -218,5 +218,9 @@
 
 (use-package csv-mode)
 
+(use-package revert-buffer-all
+  :config
+  (global-set-key (kbd "C-S-M-r") 'revert-buffer-all))
+
 (provide 'init)
 ;;; init.el ends here

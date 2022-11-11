@@ -126,6 +126,7 @@ in
       projectile
       purescript-mode
       ranger
+      revert-buffer-all
       rg
       ripgrep # for use with projectile
       rust-mode
@@ -175,6 +176,11 @@ in
       "jump" = {
         hostname = "jumphost.tvbeat.com";
         port = 443;
+        user = "kzaborsky";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+      "tvb-bastion" = {
+        hostname = "bastion.tvbeat.com";
         user = "kzaborsky";
         identityFile = "~/.ssh/id_ed25519";
       };
