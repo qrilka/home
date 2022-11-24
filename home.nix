@@ -186,14 +186,15 @@ in
       };
       "*.node" = {
         proxyJump = "jump";
+        forwardAgent = true;
         user = "kzaborsky";
       };
-      # doesn't work for some reason
-      "*+*" = {
-        proxyCommand = "ssh -v $(echo %h | sed 's/^.*+//;s/^\([^:]*$\)/\1:22/') -W $(echo %h | sed 's/+[^+]*$//;s/\([^+%%]*\)%%\([^+]*\)$/\2 -l \1/;s/:\([^:+]*\)$/ -p \1/')";
-        user = "kzaborsky";
-        identityFile = "~/.ssh/id_ed25519";
-      };
+#      # doesn't work for some reason
+#      "*+*" = {
+#        proxyCommand = "ssh -v $(echo %h | sed 's/^.*+//;s/^\([^:]*$\)/\1:22/') -W $(echo %h | sed 's/+[^+]*$//;s/\([^+%%]*\)%%\([^+]*\)$/\2 -l \1/;s/:\([^:+]*\)$/ -p \1/')";
+#        user = "kzaborsky";
+#        identityFile = "~/.ssh/id_ed25519";
+#      };
     };
   };
   programs.vscode = {
