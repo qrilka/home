@@ -213,8 +213,12 @@ in
 
   services.gpg-agent = {
     enable = true;
+    enableScDaemon = false;
     enableSshSupport = true;
-    sshKeys = [ "3E5F0C40E930755454B23E8920395C100F133AD1" ];
+    sshKeys = [
+      "3E5F0C40E930755454B23E8920395C100F133AD1" # RSA
+      "DF68CBC2EC32CA05C4D5073BF3FD17291344F658" # Ed25519
+    ];
   };
 
   services.kbfs.enable = true;
