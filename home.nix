@@ -16,6 +16,15 @@ let
    };
 in
 {
+  nix = {
+    package = pkgs.nix;
+    settings = {
+      experimental-features = "nix-command flakes";
+      keep-derivations = true;
+      keep-outputs = true;
+    };
+  };
+
   nixpkgs.config = import ./nixpkgs-config.nix;
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
