@@ -1,9 +1,9 @@
 {
   description = "qrilka's Home Manager config";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     home-manager = {
-      url = "github:nix-community/home-manager/release-22.05";
+      url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -19,11 +19,17 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-        configuration = import ./home.nix;
         pkgs = nixpkgs.legacyPackages.${system};
-        
-        inherit system username ;
-        homeDirectory = "/home/${username}";
+        modules = [
+          ./home.nix
+          {
+            home = {
+              inherit username;
+              homeDirectory = "/home/${username}";
+              stateVersion = "23.05";
+            };
+          }
+        ];
       };
     };
 }

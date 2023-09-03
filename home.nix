@@ -141,6 +141,7 @@ in
       rust-mode
       selectrum
       selectrum-prescient
+      sqlite3
       terraform-mode
       typescript-mode
       use-package
