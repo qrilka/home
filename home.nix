@@ -59,6 +59,7 @@ in
     pkgs.mc
     pkgs.mpv
     pkgs.multimarkdown
+    pkgs.nerdfonts # for nerd-icons.el
     pkgs.nix-tree
     pkgs.nixfmt
     pkgs.nodePackages.typescript

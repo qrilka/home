@@ -54,7 +54,7 @@
   (flycheck-pos-tip-mode)
   :hook (prog-mode . flycheck-mode))
 
-(use-package all-the-icons
+(use-package nerd-icons
   :ensure t)
 
 (use-package doom-modeline
