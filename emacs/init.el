@@ -123,6 +123,10 @@
   :ensure t
   :commands lsp-ui-mode)
 
+(use-package yasnippet
+  :ensure t
+  :hook ((lsp-mode . yas-minor-mode)))
+
 (use-package terraform-mode
   :mode "\\.tf\\'")
 

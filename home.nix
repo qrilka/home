@@ -147,6 +147,7 @@ in
       typescript-mode
       use-package
       yaml-mode
+      yasnippet
       ];
   };
   # Let Home Manager install and manage itself.
