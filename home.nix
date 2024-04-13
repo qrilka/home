@@ -48,11 +48,11 @@ in
 #    pkgs.go
     pkgs.graphviz
     pkgs.hicolor-icon-theme
+#    pkgs.jetbrains.idea-community
+    pkgs.just
     pkgs.kdiff3
     pkgs.keybase-gui
     pkgs.libreoffice
-#    pkgs.jetbrains.idea-community
-    pkgs.just
     pkgs.maim
     pkgs.man-pages
     pkgs.meld
