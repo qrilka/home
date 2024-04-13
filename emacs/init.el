@@ -119,7 +119,9 @@
 
 (use-package lsp-mode
   :ensure t
-  :init (setq lsp-keymap-prefix "C-l")
+  :init
+  (setq lsp-keymap-prefix "C-l")
+;  (setq lsp-rust-analyzer-rustfmt-override-command ["leptosfmt" "--stdin" "--rustfmt"])
   :commands lsp)
 
 (use-package lsp-ui
