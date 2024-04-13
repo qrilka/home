@@ -64,8 +64,6 @@ in
     pkgs.nixfmt
     pkgs.nodePackages.typescript
     pkgs.openssh
-#    pkgs.ormolu
-#    pkgs.plantuml
     pkgs.procs
     pkgs.ranger
     pkgs.ripgrep
@@ -77,10 +75,7 @@ in
     pkgs.stylish-haskell
 #    pkgs.teams
     pkgs.tree
-# dies on ? entered
-    #    pkgs.ytop
     pkgs.unrar
-#    pkgs.zoom-us doesn't work even with nixGL
     pkgs.zenith
   ];
 
@@ -117,8 +112,6 @@ in
       forge
       graphql-mode
       graphviz-dot-mode
-      # fails compiling because of MonadFail
-      #      hindent
       just-mode
       lsp-mode
       lsp-ui
@@ -129,9 +122,6 @@ in
       neotree
       nix-mode
       org
-      # 20.03 contains melpa snapshot for 2020-01-08 and ormolu package is just too old
-      #      ormolu
-      #      powerline
       prescient
       projectile
       purescript-mode
@@ -184,22 +174,6 @@ in
         hostname = "bitbucket.org";
         identityFile = "~/.ssh/id_rsa_bitbucket";
         identitiesOnly = true;
-      };
-      "jump" = {
-        hostname = "jumphost.tvbeat.com";
-        port = 443;
-        user = "kzaborsky";
-        identityFile = "~/.ssh/id_ed25519";
-      };
-      "tvb-bastion" = {
-        hostname = "bastion.tvbeat.com";
-        user = "kzaborsky";
-        identityFile = "~/.ssh/id_ed25519";
-      };
-      "*.node" = {
-        proxyJump = "jump";
-        forwardAgent = true;
-        user = "kzaborsky";
       };
 #      # doesn't work for some reason
 #      "*+*" = {
