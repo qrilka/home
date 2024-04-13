@@ -35,6 +35,9 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+;; store write lock files in /var/tmp
+(setq lock-file-name-transforms
+      '(("\\`/.*/\\([^/]+\\)\\'" "/var/tmp/\\1" t)))
 
 (use-package selectrum
   :ensure t
