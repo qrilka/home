@@ -106,6 +106,7 @@ in
       ag
       all-the-icons
       cargo
+      catppuccin-theme
       csv-mode
       dante
       diff-hl
@@ -125,7 +126,6 @@ in
       magit
       markdown-mode
       markdown-toc
-      material-theme
       neotree
       nix-mode
       org

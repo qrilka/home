@@ -5,10 +5,8 @@
 (menu-bar-mode -1)
 (setq column-number-mode t)
 (set-frame-font "LiberationMono-10")
-(use-package material-theme
-  :ensure t
-  :init
-  (load-theme 'material t))
+(use-package catppuccin-theme)
+(load-theme 'catppuccin :no-confirm)
 (blink-cursor-mode 0)
 ;; inital view
 (setq initial-scratch-message "")
