@@ -32,6 +32,7 @@ in
 #    bwbackup
     pkgs.awscli
     pkgs.bandwhich
+    pkgs.bat
     pkgs.bitwarden-cli
     pkgs.breeze-icons
 #    pkgs.dbeaver
