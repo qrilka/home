@@ -137,6 +137,7 @@ in
       terraform-mode
       typescript-mode
       use-package
+      xterm-color
       yaml-mode
       yasnippet
       ];
