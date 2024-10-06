@@ -36,6 +36,7 @@ in
     pkgs.bitwarden-cli
     pkgs.breeze-icons
     pkgs.dbeaver
+    pkgs.dua
     pkgs.du-dust
     pkgs.emacs-all-the-icons-fonts
     pkgs.evince
