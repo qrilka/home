@@ -35,7 +35,7 @@ in
     pkgs.bat
     pkgs.bitwarden-cli
     pkgs.breeze-icons
-#    pkgs.dbeaver
+    pkgs.dbeaver
     pkgs.du-dust
     pkgs.emacs-all-the-icons-fonts
     pkgs.evince
