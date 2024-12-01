@@ -35,7 +35,7 @@ in
     pkgs.bat
     pkgs.bitwarden-cli
     pkgs.breeze-icons
-    pkgs.dbeaver
+    pkgs.dbeaver-bin
     pkgs.dua
     pkgs.du-dust
     pkgs.emacs-all-the-icons-fonts
@@ -63,7 +63,7 @@ in
     pkgs.multimarkdown
     pkgs.nerdfonts # for nerd-icons.el
     pkgs.nix-tree
-    pkgs.nixfmt
+    pkgs.nixfmt-classic
     pkgs.nodePackages.typescript
     pkgs.openssh
     pkgs.procs
