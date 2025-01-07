@@ -209,6 +209,7 @@ in
       "3E5F0C40E930755454B23E8920395C100F133AD1" # RSA
       "DF68CBC2EC32CA05C4D5073BF3FD17291344F658" # Ed25519
     ];
+    pinentryPackage = pkgs.pinentry-all;
   };
 
   services.kbfs.enable = true;
