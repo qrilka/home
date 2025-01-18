@@ -45,7 +45,7 @@ in
     pkgs.gimp
     pkgs.gitAndTools.hub
     pkgs.gnome-themes-extra
-    pkgs.gnome3.adwaita-icon-theme
+    pkgs.gnome.adwaita-icon-theme
     pkgs.gnome-themes-extra
 #    pkgs.go
     pkgs.graphviz
@@ -189,7 +189,7 @@ in
   programs.vscode = {
     enable = true;
     extensions = [
-      pkgs.vscode-extensions.matklad.rust-analyzer
+      pkgs.vscode-extensions.rust-lang.rust-analyzer
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       # pkgs.vscode-extensions.golang.Go
       {
