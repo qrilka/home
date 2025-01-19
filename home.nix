@@ -59,6 +59,7 @@ in
     pkgs.man-pages
     pkgs.meld
     pkgs.mc
+    (config.lib.nixGL.wrap pkgs.mpv)
 #    pkgs.mpv doesn't work in Ubuntu because of OpenGL
     pkgs.multimarkdown
     pkgs.nerdfonts # for nerd-icons.el
