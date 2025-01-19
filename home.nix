@@ -55,6 +55,7 @@ in
     pkgs.kdiff3
     pkgs.keybase-gui
     pkgs.libreoffice
+    pkgs.logseq
     pkgs.maim
     pkgs.man-pages
     pkgs.meld
