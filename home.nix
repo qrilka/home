@@ -30,6 +30,7 @@ in
 
   home.packages = [
 #    bwbackup
+    pkgs.adwaita-icon-theme
     pkgs.awscli
     pkgs.bandwhich
     pkgs.bat
@@ -46,7 +47,6 @@ in
     pkgs.gimp
     pkgs.gitAndTools.hub
     pkgs.gnome-themes-extra
-    pkgs.gnome.adwaita-icon-theme
     pkgs.gnome-themes-extra
 #    pkgs.go
     pkgs.graphviz
