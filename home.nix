@@ -42,6 +42,7 @@ in
     pkgs.evince
     pkgs.fd
     pkgs.gawk # for unrar in mc
+    pkgs.gh
     pkgs.gimp
     pkgs.gitAndTools.hub
     pkgs.gnome-themes-extra
