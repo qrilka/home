@@ -71,7 +71,7 @@ in
     pkgs.procs
     pkgs.ranger
     pkgs.ripgrep
-    pkgs.rustup
+#    pkgs.rustup
     pkgs.simple-scan
     pkgs.smartmontools
     pkgs.stack
