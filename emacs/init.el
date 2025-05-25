@@ -229,5 +229,10 @@
   :config
   (global-set-key (kbd "C-S-M-r") 'revert-buffer-all))
 
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 (provide 'init)
 ;;; init.el ends here

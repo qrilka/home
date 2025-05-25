@@ -111,6 +111,7 @@ in
       diff-hl
       direnv
       doom-modeline
+      editorconfig
       flycheck-pos-tip
       flycheck-rust
       forge
