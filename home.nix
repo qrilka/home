@@ -175,6 +175,7 @@ in
     };
   };
   programs.ssh = {
+    serverAliveInterval = 60;
     enable = true;
     matchBlocks = {
       "bitbucket-fpco" = {
