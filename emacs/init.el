@@ -113,7 +113,15 @@
 
 (use-package rust-mode
   :hook (rust-mode . lsp)
-  :mode "\\.rs\\'")
+  :mode "\\.rs\\'"
+  :config
+  (setq lsp-rust-analyzer-diagnostics-enable t)
+  (defun my-lsp-rust-analyzer-init-options (orig-fun)
+    (let ((orig-options (funcall orig-fun)))
+      (plist-put orig-options :cargo
+                 (plist-put (or (plist-get orig-options :cargo) '())
+                            :targetDir "target/rust-analyzer"))))
+  (advice-add 'lsp-rust-analyzer--make-init-options :around #'my-lsp-rust-analyzer-init-options))
 
 (use-package flycheck-rust
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
