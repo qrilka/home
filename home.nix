@@ -130,6 +130,8 @@ in
       neotree
       nix-mode
       org
+      org-roam
+      org-roam-ui
       prescient
       projectile
       purescript-mode
