@@ -35,7 +35,6 @@ in
     pkgs.bandwhich
     pkgs.bat
     pkgs.bitwarden-cli
-    pkgs.breeze-icons
     pkgs.dbeaver-bin
     pkgs.dua
     pkgs.du-dust
@@ -64,10 +63,13 @@ in
     (config.lib.nixGL.wrap pkgs.mpv)
 #    pkgs.mpv doesn't work in Ubuntu because of OpenGL
     pkgs.multimarkdown
-    pkgs.nerdfonts # for nerd-icons.el
+    pkgs.nerd-fonts.symbols-only # for nerd-icons.el
     pkgs.nix-tree
     pkgs.nixfmt-classic
     pkgs.nodePackages.typescript
+    # use gsettings set org.gnome.desktop.interface font-name 'Noto Sans 11' to set gnome font
+    # and also gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans Mono 11'
+    pkgs.noto-fonts
     pkgs.openssh
     pkgs.procs
     pkgs.ranger
@@ -191,20 +193,6 @@ in
 #      };
     };
   };
-  programs.vscode = {
-    enable = true;
-    extensions = [
-      pkgs.vscode-extensions.rust-lang.rust-analyzer
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      # pkgs.vscode-extensions.golang.Go
-      {
-        name = "Go";
-        publisher = "golang";
-        version = "0.18.1";
-        sha256 = "sha256-b2Wa3TULQQnBm1/xnDCB9SZjE+Wxz5wBttjDEtf8qlE=";
-      }
-    ];
-  };
 
   services.gpg-agent = {
     enable = true;
@@ -214,7 +202,9 @@ in
       "3E5F0C40E930755454B23E8920395C100F133AD1" # RSA
       "DF68CBC2EC32CA05C4D5073BF3FD17291344F658" # Ed25519
     ];
-    pinentryPackage = pkgs.pinentry-all;
+    pinentry = {
+      package = pkgs.pinentry-all;
+    };
   };
 
   services.kbfs.enable = true;

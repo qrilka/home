@@ -56,7 +56,10 @@
   :hook (prog-mode . flycheck-mode))
 
 (use-package nerd-icons
-  :ensure t)
+  :ensure t
+  :custom
+  (nerd-icons-font-family "Symbols Nerd Font")
+  )
 
 (use-package doom-modeline
   :ensure t
