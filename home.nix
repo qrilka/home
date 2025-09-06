@@ -47,7 +47,7 @@ in
     pkgs.gitAndTools.hub
     pkgs.gnome-themes-extra
     pkgs.gnome-themes-extra
-#    pkgs.go
+    pkgs.go
     pkgs.graphviz
     pkgs.hicolor-icon-theme
 #    pkgs.jetbrains.idea-community
