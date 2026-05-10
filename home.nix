@@ -51,7 +51,6 @@ in
     pkgs.graphviz
     pkgs.hicolor-icon-theme
 #    pkgs.jetbrains.idea-community
-    pkgs.jujutsu
     pkgs.just
     pkgs.kdiff3
     pkgs.keybase-gui
@@ -179,6 +178,15 @@ in
     signing = {
       key = "17924AD2";
       signByDefault = true;
+    };
+  };
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Kirill Zaborsky";
+        email = "qrilka@gmail.com";
+      };
     };
   };
   programs.ssh = {
