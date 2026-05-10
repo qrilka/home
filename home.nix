@@ -37,20 +37,21 @@ in
     pkgs.bitwarden-cli
     pkgs.dbeaver-bin
     pkgs.dua
-    pkgs.du-dust
+    pkgs.dust
     pkgs.emacs-all-the-icons-fonts
     pkgs.evince
     pkgs.fd
     pkgs.gawk # for unrar in mc
     pkgs.gh
     pkgs.gimp
-    pkgs.gitAndTools.hub
+    pkgs.hub
     pkgs.gnome-themes-extra
     pkgs.gnome-themes-extra
     pkgs.go
     pkgs.graphviz
     pkgs.hicolor-icon-theme
 #    pkgs.jetbrains.idea-community
+    pkgs.jujutsu
     pkgs.just
     pkgs.kdiff3
     pkgs.keybase-gui
@@ -157,13 +158,11 @@ in
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
-    userName = "Kirill Zaborsky";
-    userEmail = "qrilka@gmail.com";
-    signing = {
-      key = "17924AD2";
-      signByDefault = true;
-    };
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Kirill Zaborsky";
+        email = "qrilka@gmail.com";
+      };
       github = {
         user = "qrilka";
       };
@@ -177,11 +176,18 @@ in
       pull.ff = "only";
       rerere.enabled = true;
     };
+    signing = {
+      key = "17924AD2";
+      signByDefault = true;
+    };
   };
   programs.ssh = {
-    serverAliveInterval = 60;
+    enableDefaultConfig = false;
     enable = true;
     matchBlocks = {
+      "*" = {
+        serverAliveInterval = 60;
+      };
       "bitbucket-fpco" = {
         hostname = "bitbucket.org";
         identityFile = "~/.ssh/id_rsa_bitbucket";
