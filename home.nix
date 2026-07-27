@@ -66,7 +66,7 @@ in
     pkgs.nerd-fonts.symbols-only # for nerd-icons.el
     pkgs.nix-tree
     pkgs.nixfmt-classic
-    pkgs.nodePackages.typescript
+    pkgs.typescript
     # use gsettings set org.gnome.desktop.interface font-name 'Noto Sans 11' to set gnome font
     # and also gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans Mono 11'
     pkgs.noto-fonts
@@ -192,7 +192,7 @@ in
   programs.ssh = {
     enableDefaultConfig = false;
     enable = true;
-    matchBlocks = {
+    settings = {
       "*" = {
         serverAliveInterval = 60;
       };
