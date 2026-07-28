@@ -176,6 +176,7 @@ in
       };
       pull.ff = "only";
       rerere.enabled = true;
+      credential."https://github.com".helper = "!gh auth git-credential";
     };
     signing = {
       key = "17924AD2";
