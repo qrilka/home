@@ -67,6 +67,7 @@ in
     pkgs.nerd-fonts.symbols-only # for nerd-icons.el
     pkgs.nix-tree
     pkgs.nixfmt
+    pkgs.nodejs
     pkgs.typescript
     # use gsettings set org.gnome.desktop.interface font-name 'Noto Sans 11' to set gnome font
     # and also gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans Mono 11'
