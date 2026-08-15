@@ -231,5 +231,10 @@ in
   services.kbfs.enable = true;
   services.keybase.enable = true;
 
+  # no socket in session variables at least since 26.05
+  systemd.user.sessionVariables = {
+    SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
+  };
+
   xdg.enable = true;
 }
