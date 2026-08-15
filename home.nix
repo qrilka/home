@@ -36,6 +36,7 @@ in
     pkgs.bat
     pkgs.bitwarden-cli
     pkgs.dbeaver-bin
+    pkgs.devenv
     pkgs.dua
     pkgs.dust
     pkgs.emacs-all-the-icons-fonts
