@@ -11,3 +11,5 @@ then it could be switched using
 ```
 home-manager switch --flake .#kirill
 ```
+
+Jujutsu experiment
