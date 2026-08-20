@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 let
    bwbackup = pkgs.rustPlatform.buildRustPackage rec {
@@ -51,6 +51,7 @@ in
     pkgs.go
     pkgs.graphviz
     pkgs.hicolor-icon-theme
+    pkgs.jjui
 #    pkgs.jetbrains.idea-community
     pkgs.just
     pkgs.kdiff3
@@ -130,6 +131,7 @@ in
       lsp-ui
       lua-mode
       magit
+      (pkgs-unstable.emacsPackagesFor pkgs.emacs).majutsu
       markdown-mode
       markdown-toc
       neotree
