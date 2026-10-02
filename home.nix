@@ -75,7 +75,6 @@ in
     # and also gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans Mono 11'
     pkgs.noto-fonts
     pkgs.openssh
-    pkgs.pi-coding-agent
     pkgs.procs
     pkgs.ranger
     pkgs.ripgrep
