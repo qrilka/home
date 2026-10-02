@@ -87,20 +87,21 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
-(use-package yaml-mode
+(use-package yaml-ts-mode
   :mode "\\.ya?ml\\'")
 
 (use-package purescript-mode
   :mode "\\.purs\\'")
 
-(use-package typescript-mode
-  :mode "\\.tsx\\'")
+(use-package typescript-ts-mode
+  :mode (("\\.ts\\'" . typescript-ts-mode)
+         ("\\.tsx\\'" . tsx-ts-mode)))
 
 (use-package cargo
-  :hook (rust-mode . cargo-minor-mode))
+  :hook (rust-ts-mode . cargo-minor-mode))
 
-(use-package rust-mode
-  :hook (rust-mode . lsp)
+(use-package rust-ts-mode
+  :hook (rust-ts-mode . lsp)
   :mode "\\.rs\\'"
   :config
   (setq lsp-rust-analyzer-diagnostics-enable t
@@ -231,9 +232,10 @@
   :config
   (direnv-mode))
 
-(use-package lua-mode
+(use-package lua-ts-mode
+  :mode "\\.lua\\'"
   :custom
-  (lua-indent-level 2))
+  (lua-ts-indent-offset 2))
 
 (use-package graphviz-dot-mode
   :config

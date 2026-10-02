@@ -75,6 +75,11 @@
   fonts.fontconfig.enable = true;
 
   home.file.".emacs".source = "${./emacs/init.el}";
+  home.file.".emacs.d/tree-sitter/libtree-sitter-rust.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-rust}/parser";
+  home.file.".emacs.d/tree-sitter/libtree-sitter-typescript.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-typescript}/parser";
+  home.file.".emacs.d/tree-sitter/libtree-sitter-tsx.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-tsx}/parser";
+  home.file.".emacs.d/tree-sitter/libtree-sitter-yaml.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-yaml}/parser";
+  home.file.".emacs.d/tree-sitter/libtree-sitter-lua.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-lua}/parser";
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
@@ -110,7 +115,6 @@
       just-mode
       lsp-mode
       lsp-ui
-      lua-mode
       magit
       (pkgs-unstable.emacsPackagesFor pkgs.emacs).majutsu
       markdown-mode
@@ -132,10 +136,8 @@
       selectrum-prescient
       sqlite3
       terraform-mode
-      typescript-mode
       use-package
       xterm-color
-      yaml-mode
       yasnippet
       ];
   };
