@@ -38,7 +38,6 @@
       '(("\\`/.*/\\([^/]+\\)\\'" "/var/tmp/\\1" t)))
 
 (use-package selectrum
-  :ensure t
   :init (selectrum-mode +1))
 
 (use-package prescient
@@ -56,19 +55,16 @@
   :hook (prog-mode . flycheck-mode))
 
 (use-package nerd-icons
-  :ensure t
   :custom
   (nerd-icons-font-family "Symbols Nerd Font")
   )
 
 (use-package doom-modeline
-  :ensure t
   :init (doom-modeline-mode 1)
   :custom
   (doom-modeline-icon (display-graphic-p)))
 
 (use-package dante
-  :ensure t
   :after haskell-mode
   :commands 'dante-mode
   :init
@@ -93,7 +89,6 @@
   :after magit)
 
 (use-package markdown-mode
-  :ensure t
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
@@ -127,18 +122,15 @@
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package lsp-mode
-  :ensure t
   :init
   (setq lsp-keymap-prefix "C-l")
 ;  (setq lsp-rust-analyzer-rustfmt-override-command ["leptosfmt" "--stdin" "--rustfmt"])
   :commands lsp)
 
 (use-package lsp-ui
-  :ensure t
   :commands lsp-ui-mode)
 
 (use-package yasnippet
-  :ensure t
   :hook ((lsp-mode . yas-minor-mode)))
 
 (use-package terraform-mode
@@ -146,7 +138,6 @@
 
 
 (use-package neotree
-  :ensure t
   :init
   (global-set-key [f8] 'neotree-toggle))
 
@@ -241,7 +232,6 @@
          (magit-post-refresh . diff-hl-magit-post-refresh)))
 
 (use-package projectile
-  :ensure t
   :init
   (projectile-mode +1)
   :bind (:map projectile-mode-map
@@ -261,7 +251,6 @@
   (lua-indent-level 2))
 
 (use-package graphviz-dot-mode
-  :ensure t
   :config
   (setq graphviz-dot-indent-width 4))
 
@@ -276,7 +265,6 @@
   (global-set-key (kbd "C-S-M-r") 'revert-buffer-all))
 
 (use-package editorconfig
-  :ensure t
   :config
   (editorconfig-mode 1))
 

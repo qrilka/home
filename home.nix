@@ -100,10 +100,12 @@
       direnv
       doom-modeline
       editorconfig
+      flycheck
       flycheck-pos-tip
       flycheck-rust
       forge
       graphql-mode
+      haskell-mode
       graphviz-dot-mode
       just-mode
       lsp-mode
@@ -113,11 +115,11 @@
       (pkgs-unstable.emacsPackagesFor pkgs.emacs).majutsu
       markdown-mode
       markdown-toc
+      nerd-icons
       neotree
       nix-mode
       org
       org-roam
-      org-roam-ui
       prescient
       projectile
       purescript-mode
