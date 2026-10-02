@@ -101,7 +101,7 @@
   :hook (rust-ts-mode . cargo-minor-mode))
 
 (use-package rust-ts-mode
-  :hook (rust-ts-mode . lsp)
+  :hook (rust-ts-mode . lsp-deferred)
   :mode "\\.rs\\'"
   :config
   (setq lsp-rust-analyzer-diagnostics-enable t
@@ -111,9 +111,9 @@
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package lsp-mode
+  :commands (lsp lsp-deferred)
   :init
-  (setq lsp-keymap-prefix "C-l")
-  :commands lsp)
+  (setq lsp-keymap-prefix "C-l"))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)
