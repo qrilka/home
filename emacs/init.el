@@ -227,6 +227,12 @@
 (add-to-list 'safe-local-variable-values
              '(dante-methods stack))
 (put 'dante-target 'safe-local-variable #'stringp)
+(put 'lsp-rust-features 'safe-local-variable
+     (lambda (value)
+       (and (derived-mode-p 'rust-ts-mode)
+            (or (equal value "all")
+                (and (vectorp value)
+                     (seq-every-p #'stringp value))))))
 
 (use-package direnv
   :config
