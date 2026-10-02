@@ -103,13 +103,8 @@
   :hook (rust-mode . lsp)
   :mode "\\.rs\\'"
   :config
-  (setq lsp-rust-analyzer-diagnostics-enable t)
-  (defun my-lsp-rust-analyzer-init-options (orig-fun)
-    (let ((orig-options (funcall orig-fun)))
-      (plist-put orig-options :cargo
-                 (plist-put (or (plist-get orig-options :cargo) '())
-                            :targetDir "target/rust-analyzer"))))
-  (advice-add 'lsp-rust-analyzer--make-init-options :around #'my-lsp-rust-analyzer-init-options))
+  (setq lsp-rust-analyzer-diagnostics-enable t
+        lsp-rust-analyzer-cargo-target-dir "target/rust-analyzer"))
 
 (use-package flycheck-rust
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
@@ -181,8 +176,6 @@
   (setq org-log-into-drawer t))
 
 (use-package org-roam
-  :init
-  (setq org-roam-v2-ack t)
   :custom
   (org-roam-directory "~/ws/org-roam")
   (org-roam-completion-everywhere t)
