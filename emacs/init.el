@@ -72,13 +72,6 @@
   (add-hook 'haskell-mode-hook 'dante-mode)
   )
 
-;(use-package ormolu
-;  :after dante
-;  :hook haskell-mode
-;  :bind
-;  (:map haskell-mode-map
-;        ("<M-return>" . ormolu-format-region)))
-
 (use-package magit
   :custom
   (magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
@@ -124,7 +117,6 @@
 (use-package lsp-mode
   :init
   (setq lsp-keymap-prefix "C-l")
-;  (setq lsp-rust-analyzer-rustfmt-override-command ["leptosfmt" "--stdin" "--rustfmt"])
   :commands lsp)
 
 (use-package lsp-ui
@@ -152,7 +144,7 @@
         ("C-c l" . org-store-link)
         ("C-c c" . org-capture)
         ("C-c a" . org-agenda))
-  :hook (org-mode . disable-electric-indent);(electric-indent-local-mode -1));((add-hook! 'org-mode-hook (electric-indent-local-mode -1))
+  :hook (org-mode . disable-electric-indent)
   :init
   (setq org-agenda-start-on-weekday nil)
   (setq org-default-notes-file "~/ws/org/notes.org")
