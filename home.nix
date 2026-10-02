@@ -1,20 +1,5 @@
 { config, pkgs, pkgs-unstable, ... }:
 
-let
-   bwbackup = pkgs.rustPlatform.buildRustPackage rec {
-     pname = "bwbackup";
-     version = "0.1.0";
-
-     src = pkgs.fetchFromGitHub {
-       owner = "snoyberg";
-       repo = pname;
-       rev = "9b608ea1cf50f75b10f638ad0a49ee35878fe96c"; # version;
-       sha256 = "10rwh61m7881xdqcnvvyxacs5x4g4x55x2z21s168b4wip18dk6g";#"73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac";
-     };
-
-     cargoSha256 = "0f92wv0gb1pa7icarqkjj8wyicd4bjw1s6rwsxb59dsnhccnd50n";
-   };
-in
 {
   nix = {
     package = pkgs.nix;
@@ -29,7 +14,6 @@ in
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.packages = [
-#    bwbackup
     pkgs.adwaita-icon-theme
     pkgs.awscli
     pkgs.bandwhich
@@ -47,12 +31,10 @@ in
     pkgs.gimp
     pkgs.hub
     pkgs.gnome-themes-extra
-    pkgs.gnome-themes-extra
     pkgs.go
     pkgs.graphviz
     pkgs.hicolor-icon-theme
     pkgs.jjui
-#    pkgs.jetbrains.idea-community
     pkgs.just
     pkgs.kdiff3
     pkgs.keybase-gui
@@ -64,7 +46,6 @@ in
     pkgs.mc
     pkgs.mise
     (config.lib.nixGL.wrap pkgs.mpv)
-#    pkgs.mpv doesn't work in Ubuntu because of OpenGL
     pkgs.multimarkdown
     pkgs.nerd-fonts.symbols-only # for nerd-icons.el
     pkgs.nix-tree
@@ -75,18 +56,16 @@ in
     # and also gsettings set org.gnome.desktop.interface monospace-font-name 'Noto Sans Mono 11'
     pkgs.noto-fonts
     pkgs.openssh
-    pkgs.pi-coding-agent
     pkgs.procs
     pkgs.ranger
     pkgs.ripgrep
-#    pkgs.rustup
     pkgs.simple-scan
     pkgs.smartmontools
     pkgs.stack
     pkgs.strace
     pkgs.stylish-haskell
-#    pkgs.teams
     pkgs.tree
+    pkgs.typst
     pkgs.unrar
     pkgs.yt-dlp
     pkgs.zenith
