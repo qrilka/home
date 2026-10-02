@@ -86,6 +86,7 @@ in
     pkgs.stylish-haskell
 #    pkgs.teams
     pkgs.tree
+    pkgs.typst
     pkgs.unrar
     pkgs.yt-dlp
     pkgs.zenith
