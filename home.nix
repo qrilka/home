@@ -151,9 +151,6 @@
       github = {
         user = "qrilka";
       };
-      credential = {
-        helper = "store --file ~/.git.credentials";
-      };
       merge = {
         tool = "kdiff3";
         conflictstyle = "diff3";
