@@ -29,7 +29,6 @@ in
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.packages = [
-#    bwbackup
     pkgs.adwaita-icon-theme
     pkgs.awscli
     pkgs.bandwhich
@@ -52,7 +51,6 @@ in
     pkgs.graphviz
     pkgs.hicolor-icon-theme
     pkgs.jjui
-#    pkgs.jetbrains.idea-community
     pkgs.just
     pkgs.kdiff3
     pkgs.keybase-gui
@@ -64,7 +62,6 @@ in
     pkgs.mc
     pkgs.mise
     (config.lib.nixGL.wrap pkgs.mpv)
-#    pkgs.mpv doesn't work in Ubuntu because of OpenGL
     pkgs.multimarkdown
     pkgs.nerd-fonts.symbols-only # for nerd-icons.el
     pkgs.nix-tree
@@ -78,13 +75,11 @@ in
     pkgs.procs
     pkgs.ranger
     pkgs.ripgrep
-#    pkgs.rustup
     pkgs.simple-scan
     pkgs.smartmontools
     pkgs.stack
     pkgs.strace
     pkgs.stylish-haskell
-#    pkgs.teams
     pkgs.tree
     pkgs.typst
     pkgs.unrar
