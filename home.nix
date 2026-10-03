@@ -74,12 +74,14 @@
 
   fonts.fontconfig.enable = true;
 
-  home.file.".emacs".source = "${./emacs/init.el}";
-  home.file.".emacs.d/tree-sitter/libtree-sitter-rust.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-rust}/parser";
-  home.file.".emacs.d/tree-sitter/libtree-sitter-typescript.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-typescript}/parser";
-  home.file.".emacs.d/tree-sitter/libtree-sitter-tsx.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-tsx}/parser";
-  home.file.".emacs.d/tree-sitter/libtree-sitter-yaml.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-yaml}/parser";
-  home.file.".emacs.d/tree-sitter/libtree-sitter-lua.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-lua}/parser";
+  # For example, "rust" expands to:
+  # home.file.".emacs.d/tree-sitter/libtree-sitter-rust.so".source = "${pkgs.tree-sitter-grammars.tree-sitter-rust}/parser";
+  home.file = {
+    ".emacs".source = "${./emacs/init.el}";
+  } // builtins.listToAttrs (map (language: {
+    name = ".emacs.d/tree-sitter/libtree-sitter-${language}.so";
+    value.source = "${builtins.getAttr ("tree-sitter-" + language) pkgs.tree-sitter-grammars}/parser";
+  }) [ "rust" "typescript" "tsx" "yaml" "lua" ]);
   home.sessionVariables = {
     LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
     LOCALE_ARCHIVE_2_27 = "${pkgs.glibcLocales}/lib/locale/locale-archive";
