@@ -90,9 +90,6 @@
 (use-package yaml-ts-mode
   :mode "\\.ya?ml\\'")
 
-(use-package purescript-mode
-  :mode "\\.purs\\'")
-
 (use-package typescript-ts-mode
   :mode (("\\.ts\\'" . typescript-ts-mode)
          ("\\.tsx\\'" . tsx-ts-mode)))
