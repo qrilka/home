@@ -3,8 +3,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    ai-setup.url = "github:qrilka/ai-setup";
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager/master"; # ai-setup doesn't work with 26.05
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -14,6 +15,7 @@
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    ai-setup,
   }:
     let
       username = "kirill";
@@ -30,6 +32,7 @@
 
         modules = [
           ./home.nix
+          ai-setup.homeManagerModules.default
           {
             home = {
               inherit username;
